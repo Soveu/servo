@@ -168,6 +168,7 @@ pub struct LayoutThread {
     fragment_tree: RefCell<Option<Arc<FragmentTree>>>,
 
     /// The document-specific shared lock used for author-origin stylesheets
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     document_shared_lock: Option<SharedRwLock>,
 
     /// A counter for epoch messages

@@ -822,6 +822,8 @@ impl ExcessInlineSizeDistributionInfo {
 /// An intermediate column size assignment.
 struct IntermediateColumnInlineSize {
     size: Au,
+
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     percentage: f32,
 }
 
