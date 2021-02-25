@@ -142,6 +142,7 @@ pub struct IOCompositor<Window: WindowMethods + ?Sized> {
     pub shutdown_state: ShutdownState,
 
     /// Tracks the last composite time.
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     last_composite_time: u64,
 
     /// Tracks whether the zoom action has happened recently.

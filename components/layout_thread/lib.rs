@@ -190,6 +190,7 @@ pub struct LayoutThread {
     root_flow: RefCell<Option<FlowRef>>,
 
     /// The document-specific shared lock used for author-origin stylesheets
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     document_shared_lock: Option<SharedRwLock>,
 
     /// A counter for epoch messages

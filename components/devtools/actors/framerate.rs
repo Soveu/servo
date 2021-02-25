@@ -17,7 +17,10 @@ pub struct FramerateActor {
     name: String,
     pipeline: PipelineId,
     script_sender: IpcSender<DevtoolScriptControlMsg>,
+
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     start_time: Option<u64>,
+
     is_recording: bool,
     ticks: Vec<HighResolutionStamp>,
 }

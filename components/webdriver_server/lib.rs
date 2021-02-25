@@ -138,12 +138,19 @@ pub struct WebDriverSession {
     implicit_wait_timeout: u64,
 
     page_loading_strategy: String,
+
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     secure_tls: bool,
+
     strict_file_interactability: bool,
+
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     unhandled_prompt_behavior: String,
 
     // https://w3c.github.io/webdriver/#dfn-active-input-sources
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     active_input_sources: Vec<InputSourceState>,
+
     // https://w3c.github.io/webdriver/#dfn-input-state-table
     input_state_table: HashMap<String, InputSourceState>,
     // https://w3c.github.io/webdriver/#dfn-input-cancel-list

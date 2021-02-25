@@ -42,9 +42,16 @@ pub struct Browser<Window: WindowPortsMethods + ?Sized> {
     browsers: Vec<BrowserId>,
 
     title: Option<String>,
+
+    #[allow(dead_code)] // FIXME: Show this somewhere in the UI
     status: Option<String>,
+
+    #[allow(dead_code)] // FIXME: Show this somewhere in the UI
     favicon: Option<ServoUrl>,
+
+    #[allow(dead_code)] // FIXME: Show this somewhere in the UI
     loading_state: Option<LoadingState>,
+
     window: Rc<Window>,
     event_queue: Vec<WindowEvent>,
     clipboard_ctx: Option<ClipboardContext>,

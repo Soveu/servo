@@ -174,7 +174,10 @@ pub struct ServoGlue {
     // and exit if it is empty afterwards.
     browsers: Vec<BrowserId>,
     events: Vec<WindowEvent>,
+
+    #[allow(dead_code)] // FIXME: do something with this or remove it
     current_url: Option<ServoUrl>,
+
     context_menu_sender: Option<IpcSender<ContextMenuResult>>,
 }
 
